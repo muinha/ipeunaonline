@@ -1,0 +1,32 @@
+@font-face{
+	font-family: hamster; 
+	src: url("fonts/Hamster.otf");
+}
+
+/** Inicio CSS menu de navegação **/
+
+.menu-topo{
+	background: #006400;
+}
+.navbar-brand:hover{
+	background: #2E8B57;
+	border-radius: 10px;
+}
+.nav-link:hover{
+	background: #2E8B57;
+	border-radius: 10px;	
+}
+
+/** Fim menu de navegação **/
+
+/** Inicio CSS ultimas noticias **/
+
+.ultimas-noticias{
+	background: #006400;
+	padding: 10px;
+}
+
+
+/** Fim CSS ultimas noticias **/
+
+/** Inicio CSS pagina inicial turismo **/
