@@ -111,17 +111,17 @@ return [
         'Configuração registro de usuários',
         [
             'text' => 'Perfil dos Usúarios',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/users',
             'icon' => 'user',
         ],
         [
             'text' => 'Editar Usúario',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/user/update',
             'icon' => 'edit',
         ],
         [
             'text' => 'Cadastrar Usúarios Admin',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/users/create',
             'icon' => 'edit',
         ],
         'Configuração área de notícias',

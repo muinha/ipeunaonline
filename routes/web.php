@@ -13,6 +13,25 @@
 
 Route::get('/', 'SiteController@index');
 
-Auth::routes();
+// Authentication Routes...
+Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/admin', 'HomeController@index')->name('home');
+// Registration Routes...
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
+
+// Password Reset Routes...
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::get('admin', 'AdminController@index')->name('home');
+Route::get('admin/users/create', 'AdminController@userCreate');
+Route::post('admin/users/create', 'AdminController@postUserCreate');
+Route::get("admin/user/update", "AdminController@userUpdate");
+Route::post("admin/user/update", "AdminController@postUserUpdate");
+Route::get('admin/users/{id}/update', 'AdminController@usersUpdate');
+Route::get('admin/users', 'AdminController@users');

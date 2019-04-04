@@ -1,1 +1,3 @@
-@extends('adminlte::register')
+<?php
+header('location: /');
+exit;
