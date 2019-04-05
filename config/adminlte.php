@@ -127,12 +127,22 @@ return [
         'Configuração área de notícias',
         [
             'text' => 'Criar Notícia',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/news/create',
             'icon' => 'user',
         ],
         [
-            'text' => 'Editar Notícia',
-            'url'  => 'admin/settings',
+            'text' => 'Todas Notícia',
+            'url'  => 'admin/news',
+            'icon' => 'lock',
+        ],
+        [
+            'text' => 'Todas Categoria de Notícia',
+            'url'  => 'admin/news/categories',
+            'icon' => 'lock',
+        ],
+        [
+            'text' => 'Criar nova categoria de Notícia',
+            'url'  => 'admin/news/categories/create',
             'icon' => 'lock',
         ],
         'Configuração área de turismo',

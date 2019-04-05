@@ -35,7 +35,7 @@
 		        </div>
 		        <!-- /.box-header -->
 		        <!-- form start -->
-		        <form role="form" action="/admin/user/update" method="post">
+		        <form role="form" action="/admin/users/{{ $user->id }}/update" method="post">
 
 		        	@csrf
 

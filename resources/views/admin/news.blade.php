@@ -1,6 +1,6 @@
 @extends ('adminlte::page')
 
-@section ('title', 'Criar um novo usuario')
+@section ('title', 'Todas as Notícias')
 
 @section ('content')
 
@@ -13,8 +13,8 @@
 	  <h1>Lista de Usuários</h1>
 
 		<ol class="breadcrumb">
-		    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-		    <li class="active"><a href="/admin/users">Usuários</a></li>
+		    <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+		    <li class="active"><a href="admin/news">Notícias</a></li>
 		</ol>
 
 	</section>
@@ -38,28 +38,20 @@
 	                <thead>
 	                  <tr>
 	                    <th style="width: 10px">#</th>
-
-	                    <th>Nome</th>
-	                    <th>E-mail</th>
-	                    <th>Login</th>
-	                    <th style="width: 60px">Admin</th>
-	                    <th style="width: 140px">&nbsp;</th>
+	                    <th>Título</th>
 	                  </tr>
 	                </thead>
 	                <tbody>
-	                	@foreach($users as $user)
+
 		                <tr>
-		                    <td>{{ $user->id }}</td>
-		                    <td>{{ $user->name }}</td>
-		                    <td>{{ $user->email }}</td>
-		                    <td>{{ $user->login }}</td>
-		                    <td>{{ $user->hierarquia }}</td>
+		                    <td>id</td>
+		                    <td>tittle</td>
 		                    <td>
-		                      <a href="users/{{ $user->id }}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-		                      <a href="users/{{ $user->id }}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+		                      <a href="users/id/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+		                      <a href="users/id/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
 		                    </td>
 		                </tr>
-	                    @endforeach
+
 	                </tbody>
 	              </table>
 

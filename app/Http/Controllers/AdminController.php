@@ -93,9 +93,9 @@ class AdminController extends Controller
 
         $usuário = Auth::user();
 
-        $results = DB::table('users')
-        ->where('id', $usuário['id'])
-        ->update([
+        $results =  DB::table('users')
+                    ->where('id', $usuário['id'])
+                    ->update([
             'name'              =>  $request['name'],
             'email'             =>  $request['email'],
             'login'             =>  $request['login'],
@@ -107,6 +107,42 @@ class AdminController extends Controller
             throw new Exception("Erro ao editar o usuário", 1);            
         } else {
             return redirect('admin/users')->with('status', 'Usuário editado');
+        }
+
+    }
+
+    public function postUsersUpdate(Request $request, $id)
+    {
+
+        $user = User::find($id);
+
+        $results = DB::table('users')
+                ->where('id',$user['id'])
+                ->update([
+            'name'              =>  $request['name'],
+            'email'             =>  $request['email'],
+            'login'             =>  $request['login'],
+            'password'          =>  $request['password'],
+            'hierarquia'        =>  $request['hierarquia'],
+        ]);
+
+        if(count($results) == 0){
+            throw new Exception("Erro na auteração dos dados do usuário", 1);           
+        } else {
+            return redirect('admin/users')->with('status', 'Usuário editado !!');
+        }
+
+    }
+
+    public function usersDelete($id)
+    {
+
+        $user = User::destroy($id);
+
+        if (count($user) == 0) {
+            throw new Exception("Erro ao excluir o usuário", 1);            
+        } else {
+            return redirect('admin/users')->with('status', 'Usuário excluido com sucesso !!');
         }
 
     }
