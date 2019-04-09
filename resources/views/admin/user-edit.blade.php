@@ -63,11 +63,10 @@
 
 						<div class="form-group">
 						    <label for="hierarquia">Hierarquia</label>
-						    <select class="form-control" value="{{ Auth::user()->hierarquia }}" name="hierarquia" id="hierarquia">
-						    	<option>CEO</option>
-						    	<option>Admin Jornal Blog</option>
-						    	<option>Admin Turismo Blog</option>
-						    	<option>Member</option>
+						    <select class="form-control"  name="hierarquia" id="hierarquia">
+						    @foreach($hierarquia as $hierarquias)
+						   <option>{{ $hierarquias->hierarquia }}</option>
+						    @endforeach
 						    </select>
 						</div>
 

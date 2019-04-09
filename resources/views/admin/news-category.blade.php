@@ -25,7 +25,7 @@
   		<div class="box box-primary">
             
             <div class="box-header">
-              <a href="admin/news/categories/create" class="btn btn-success">Cadastrar Categoria</a>
+              <a href="categories/create" class="btn btn-success">Cadastrar Categoria</a>
             </div>
 
             <div class="box-body no-padding">

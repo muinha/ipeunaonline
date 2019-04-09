@@ -30,6 +30,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 // Admin Users
 Route::get('admin', 'AdminController@index')->name('home');
+Route::get('admin/users/hierarquia/create', 'AdminController@hierarquiaUsersCreate');
+Route::post('admin/users/hierarquia/create', 'AdminController@postHierarquiaUsersCreate');
 Route::get('admin/users/create', 'AdminController@userCreate');
 Route::post('admin/users/create', 'AdminController@postUserCreate');
 Route::get("admin/user/update", "AdminController@userUpdate");

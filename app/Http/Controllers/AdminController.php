@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use app\User;
+use App\Hierarquia;
 use Auth;
 
 class AdminController extends Controller
@@ -34,7 +35,9 @@ class AdminController extends Controller
     public function userCreate()
     {
 
-        return view('admin.user-create');
+        $hierarquia = Hierarquia::all();
+
+        return view('admin.user-create', compact('hierarquia'));
 
     }
 
@@ -82,7 +85,9 @@ class AdminController extends Controller
     public function userUpdate()
     {
 
-        return view('admin.user-edit');
+        $hierarquia = Hierarquia::all();
+
+        return view('admin.user-edit', compact('hierarquia'));
 
     }
 
@@ -146,4 +151,29 @@ class AdminController extends Controller
         }
 
     }
+
+    public function hierarquiaUsersCreate()
+    {
+
+        return view('admin.users-hierarquia');
+
+    }
+
+    public function postHierarquiaUsersCreate(Request $request)
+    {
+
+        $request->all();
+
+        $results = Hierarquia::create([
+            'hierarquia'    =>      $request['hierarquia']
+        ]);
+
+        if(count($results) == 0){
+            throw new Exception("Hierarquia não cadastrada !!", 1);            
+        } else {
+            return redirect('admin')->with('status', 'Hierarquia Cadastrada com Sucesso !!');
+        }
+
+    }
+
 }

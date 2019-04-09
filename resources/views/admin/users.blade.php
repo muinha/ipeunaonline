@@ -42,7 +42,7 @@
 	                    <th>Nome</th>
 	                    <th>E-mail</th>
 	                    <th>Login</th>
-	                    <th style="width: 60px">Admin</th>
+	                    <th style="width: 100px">Admin</th>
 	                    <th style="width: 140px">&nbsp;</th>
 	                  </tr>
 	                </thead>

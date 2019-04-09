@@ -14,7 +14,7 @@ class CategoryNewsController extends Controller
 
 		$category = CategoryNews::all();
 
-		dd($category);
+		return view('admin.news-category',compact('category'));
 
 
 	}

@@ -13,9 +13,9 @@
 
 	  <ol class="breadcrumb">
 
-	    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-	    <li><a href="/admin/users">Usuários</a></li>
-	    <li class="active"><a href="/admin/users/create">Cadastrar</a></li>
+	    <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+	    <li><a href="admin/users">Usuários</a></li>
+	    <li class="active"><a href="admin/users/create">Cadastrar</a></li>
 
 	</ol>
 
@@ -64,10 +64,9 @@
 						<div class="form-group">
 						    <label for="hierarquia">Hierarquia</label>
 						    <select class="form-control" name="hierarquia" id="hierarquia">
-						    	<option>CEO</option>
-						    	<option>Adm Jornal</option>
-						    	<option>Adm Blog</option>
-						    	<option>Member</option>
+							@foreach($hierarquia as $hierarquias)
+						    	<option>{{ $hierarquias->hierarquia }}</option>
+						    @endforeach
 						    </select>
 						</div>
 

@@ -124,6 +124,11 @@ return [
             'url'  => 'admin/users/create',
             'icon' => 'edit',
         ],
+        [
+            'text' => 'Cadastrar Hierarquia usuários',
+            'url'  => 'admin/users/hierarquia/create',
+            'icon' => 'edit',
+        ],
         'Configuração área de notícias',
         [
             'text' => 'Criar Notícia',
