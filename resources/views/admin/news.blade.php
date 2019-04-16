@@ -10,7 +10,7 @@
 <!-- Content Header (Page header) -->
 	<section class="content-header">
 
-	  <h1>Lista de Usuários</h1>
+	  <h1>Lista de Noticias</h1>
 
 		<ol class="breadcrumb">
 		    <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -29,7 +29,7 @@
 	  		<div class="box box-primary">
 	            
 	            <div class="box-header">
-	              <a href="/admin/users/create" class="btn btn-success">Cadastrar Usuário</a>
+	              <a href="admin/news/create" class="btn btn-success">Cadastrar Usuário</a>
 	            </div>
 
 	            <div class="box-body no-padding">
@@ -42,16 +42,16 @@
 	                  </tr>
 	                </thead>
 	                <tbody>
-
+										@foreach($news as $newss)
 		                <tr>
-		                    <td>id</td>
-		                    <td>tittle</td>
+		                    <td>{{ $newss->id }}</td>
+		                    <td>{{ $newss->title }}</td>
 		                    <td>
-		                      <a href="users/id/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-		                      <a href="users/id/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+		                      <a href="news/{{ $newss->id }}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+		                      <a href="news/{{ $newss->id }}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
 		                    </td>
 		                </tr>
-
+										@endforeach
 	                </tbody>
 	              </table>
 

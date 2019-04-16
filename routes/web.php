@@ -45,6 +45,9 @@ Route::get('admin/users', 'AdminController@users');
 
 Route::get('admin/news', 'AdminNewsController@news');
 Route::get('admin/news/create', 'AdminNewsController@newsCreate');
+Route::post('admin/news/create', 'AdminNewsController@store');
+Route::get('admin/news/{id}/update', 'AdminNewsController@newsUpdate');
+Route::post('admin/news/{id}/update', 'AdminNewsController@postNewsUpdate');
 Route::get('admin/news/categories', 'CategoryNewsController@newsCategory');
 Route::get('admin/news/categories/create', 'CategoryNewsController@newsCategoryCreate');
 Route::post('admin/news/categories/create', 'CategoryNewsController@postNewsCategoryCreate');

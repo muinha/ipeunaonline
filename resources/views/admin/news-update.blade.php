@@ -1,6 +1,6 @@
 @extends ('adminlte::page')
 
-@section ('title', 'Criar uma nova Notícia')
+@section ('title', 'Editar uma nova Notícia')
 
 @section ('content')
 
@@ -9,13 +9,13 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
 
-	<h1>Criar uma nova Notícia</h1>
+	<h1>Editar uma nova Notícia</h1>
 
 	  <ol class="breadcrumb">
 
 	    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
 	    <li><a href="/admin/news">Notícias</a></li>
-	    <li class="active"><a href="/admin/news/create">Cadastrar</a></li>
+	    <li class="active"><a href="/admin/news/update">Editar</a></li>
 
 	</ol>
 
@@ -31,7 +31,7 @@
 	  		<div class="box box-success">
 
 		        <div class="box-header with-border">
-		          <h3 class="box-title">Nova Notícia</h3>
+		          <h3 class="box-title">Editar Notícia</h3>
 		        </div>
 		        <!-- /.box-header -->
 		        <!-- form start -->
@@ -46,7 +46,7 @@
 			              	<input type="file" class="form-control" id="image_principal" name="image_principal" value="{$product.vlweight}">
 			              	<div class="box box-widget">
 			                	<div class="box-body">
-			                  		<img class="img-responsive" id="image-preview" src="{$product.desphoto}" alt="Photo">
+			                  		<img class="img-responsive" id="image-preview" alt="{{ $newsImage}}" src="">
 			                	</div>
 			              	</div>
 			            </div>
@@ -54,12 +54,12 @@
 
 			            <div class="form-group">
 				            <label for="title">Title</label>
-				            <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título">
+				            <input type="text" class="form-control" id="title" name="title" value="{{ $news->title }}">
 			            </div>
 
 			            <div class="form-group">
 			                <label for="subtitle">Subtitle</label>
-			                <input type="text" class="form-control" id="subtitle" name="subtitle" placeholder="Digite o Subtitle">
+			                <input type="text" class="form-control" id="subtitle" name="subtitle" value="{{ $news->subtitle }}">
 			            </div>
 
 						<div class="form-group">
@@ -73,7 +73,7 @@
 
 						<div class="form-group">
 						  <label for="news">Notícias:</label>
-						  <textarea class="form-control" name="news" rows="15" id="news"></textarea>
+						  <textarea class="form-control" value="{{ $news->title }}" name="news" rows="15" id="news"></textarea>
 						</div>
 
 		          </div>
