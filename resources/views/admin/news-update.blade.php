@@ -13,9 +13,9 @@
 
 	  <ol class="breadcrumb">
 
-	    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-	    <li><a href="/admin/news">Notícias</a></li>
-	    <li class="active"><a href="/admin/news/update">Editar</a></li>
+	    <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+	    <li><a href="admin/news">Notícias</a></li>
+	    <li class="active"><a href="admin/news/update">Editar</a></li>
 
 	</ol>
 
@@ -35,7 +35,7 @@
 		        </div>
 		        <!-- /.box-header -->
 		        <!-- form start -->
-		        <form role="form" action="create" method="post" enctype="multipart/form-data">
+		        <form role="form" action="" method="post" enctype="multipart/form-data">
 
 		        	@csrf
 
@@ -46,7 +46,9 @@
 			              	<input type="file" class="form-control" id="image_principal" name="image_principal" value="{$product.vlweight}">
 			              	<div class="box box-widget">
 			                	<div class="box-body">
-			                  		<img class="img-responsive" id="image-preview" alt="{{ $newsImage}}" src="">
+			                		@foreach($newsImage as $imageNews)
+			                  		<img class="img-responsive" id="image-preview" alt="{{ $imageNews->image_principal }}" src="{{ url("storage/news/{$imageNews->image_principal}") }}">
+			                  		@endforeach
 			                	</div>
 			              	</div>
 			            </div>
