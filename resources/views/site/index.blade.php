@@ -55,61 +55,16 @@
 	    <div class="lista-noticias">
 
 			<div class="row col-md-12 justify-content-center">
-				
+			@foreach($news as $post)	
 				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
+					 <img class="card-img-top" alt="{{ $post->image_principal }}" src="{{ url("storage/news/{$post->image_principal}") }}">
 					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+					    <h5 class="card-title text-center">{{ $post->title }}</h5>
+					    <p class="card-text">{{ $post->subtitle }}</p>
 					    <a href="#" class="btn btn-primary">Visitar</a>
 					</div>
 				</div>
-
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
-					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
-					</div>
-				</div>
-
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
-					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
-					</div>
-				</div>
-
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
-					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
-					</div>
-				</div>
-
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
-					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
-					</div>
-				</div>
-
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
-					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">
-					 <div class="card-body">
-					    <h5 class="card-title text-center">Título do card</h5>
-					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
-					</div>
-				</div>
-
+			@endforeach
 			</div>
 
 		</div>

@@ -90,7 +90,7 @@ class AdminNewsController extends Controller
 
 		$image = ImageNews::find($id);
 
-		if($request->image_principal != '')
+		if($request->image_principal != " ")
 			Storage::delete("news/{$image->principal}");
 
 		if($request->hasFile('image_principal') && $request->file('image_principal')->isValid()){
@@ -123,8 +123,26 @@ class AdminNewsController extends Controller
 			return redirect('admin/news')->with('success', 'Dados atualizados com sucesso!');
 		}
 
+	}
 
+	public function delete($id, News $news, ImageNews $imageNews)
+	{
+
+		if(!$news = News::find($id))
+			redirect()->back();
+
+		if(!$imageNews = ImageNews::find($id))
+			redirect()->back();
+
+		if($news->delete() and $imageNews->delete()){
+			Storage::delete("news/{$imageNews->image_principal}");
+			return redirect('admin/news')->with('success', 'Sucesso ao deletar noticia!');
+		}
+
+		return redirect()->back()->with('error', 'Falha ao deletar a noticia!');
 
 	}
+
+
 
 }

@@ -75,7 +75,7 @@
 
 						<div class="form-group">
 						  <label for="news">Notícias:</label>
-						  <textarea class="form-control" value="{{ $news->title }}" name="news" rows="15" id="news"></textarea>
+						  <textarea class="form-control" name="news" rows="15" id="news">{{ $news->news }}</textarea>
 						</div>
 
 		          </div>
