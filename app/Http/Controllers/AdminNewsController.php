@@ -96,9 +96,6 @@ class AdminNewsController extends Controller
 
 		$image = ImageNews::find($id);
 
-		if($request->image_principal != ' ')
-			Storage::delete("news/{$image->principal}");
-
 		if($request->hasFile('image_principal') && $request->file('image_principal')->isValid()){
 			$name = uniqid(date('HisYmd'));
 			$extension = $request->image_principal->extension();
@@ -109,6 +106,9 @@ class AdminNewsController extends Controller
 			return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
 			}
 		}
+
+		if($nameFile != ' ')
+		Storage::delete("news/{$image->image_principal}");
 
 		if($nameFile == ' ')
 			$nameFile = $image->image_principal;
