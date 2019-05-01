@@ -18,7 +18,10 @@ class CreateNewsTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->string('category', 30);
-            $table->string('news');
+            $table->longText('post_1');
+            $table->longText('post_2');
+            $table->longText('post_3');
+            $table->longText('post_4');
             $table->rememberToken();
             $table->timestamps();
         });

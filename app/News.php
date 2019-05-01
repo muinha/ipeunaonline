@@ -10,7 +10,7 @@ class News extends Model
 {
     
     protected $fillable = [
-        'title', 'subtitle','category', 'news', 'image_principal', 'image'
+        'title', 'subtitle','category', 'post_1', 'post_2', 'post_3', 'post_4', 'image_principal', 'image'
     ];
 
     public function imageNews()

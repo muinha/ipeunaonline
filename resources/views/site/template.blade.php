@@ -44,53 +44,53 @@
         </div>
     </div> <!-- End header area -->
         
-        <div class="menu-topo">
+    <div class="menu-topo">
 
-            <nav class="navbar navbar-expand-lg navbar-light ml-1">
+        <nav class="navbar navbar-expand-lg navbar-light ml-1">
 
-                <a class="navbar-brand h1" href="#">IPEÚNA online</a>
+            <a class="navbar-brand h1" href="#">IPEÚNA online</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
+            <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
 
-                    <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto">
 
-                        <li class="nav-item active">
-                            <a class="nav-link mr-3" href="#">Inicio</a>
-                        </li>
+                    <li class="nav-item active">
+                        <a class="nav-link mr-3" href="#">Inicio</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="#">Sobre o site</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="#">Sobre o site</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="#">Notícias</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="noticias">Notícias</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="#">Turismo</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="turismo">Turismo</a>
+                    </li>
 
-                    </ul>
+                </ul>
 
-                    <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0">
 
-                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
 
-                    </form>
+                </form>
 
-                </div>
+            </div>
 
-            </nav>
+        </nav>
 
-        </div>
+    </div>
 
-    </header>
+</header>
         <!-- Fim do menu de naveção -->
 
         @yield('content')

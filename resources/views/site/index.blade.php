@@ -61,7 +61,7 @@
 					 <div class="card-body">
 					    <h5 class="card-title text-center">{{ $post->title }}</h5>
 					    <p class="card-text">{{ $post->subtitle }}</p>
-					    <a href="#" class="btn btn-primary">Visitar</a>
+					    <a href="post/{{ $post->id }}" class="btn btn-primary">Visitar</a>
 					</div>
 				</div>
 			@endforeach

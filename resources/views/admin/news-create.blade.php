@@ -24,6 +24,16 @@
 <!-- Main content -->
 <section class="content">
 
+@if($errors->any())
+	<div class="alert alert-danger">
+		<ul>
+				@foreach($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+		</ul>
+</div>
+@endif
+
   	<div class="row">
 
 	  	<div class="col-md-12">
@@ -44,11 +54,6 @@
 			            <div class="form-group">
 			              	<label for="image_principal">Foto</label>
 			              	<input type="file" class="form-control" id="image_principal" name="image_principal" value="{$product.vlweight}">
-			              	<div class="box box-widget">
-			                	<div class="box-body">
-			                  		<img class="img-responsive" id="image-preview" src="{$product.desphoto}" alt="Photo">
-			                	</div>
-			              	</div>
 			            </div>
 
 
@@ -72,8 +77,23 @@
 						</div>
 
 						<div class="form-group">
-						  <label for="news">Notícias:</label>
-						  <textarea class="form-control" name="news" rows="15" id="news"></textarea>
+						  <label for="post_1">Paragrafo 1 da noticia:</label>
+						  <textarea class="form-control" name="post_1" rows="5" id="post_1"></textarea>
+						</div>
+
+						<div class="form-group">
+						  <label for="post_2">Paragrafo 2 da noticia:</label>
+						  <textarea class="form-control" name="post_2" rows="5" id="post_2"></textarea>
+						</div>
+
+						<div class="form-group">
+						  <label for="post_3">Paragrafo 3 da noticia:</label>
+						  <textarea class="form-control" name="post_3" rows="5" id="post_3"></textarea>
+						</div>
+
+						<div class="form-group">
+						  <label for="post_4">Paragrafo 4 da noticia:</label>
+						  <textarea class="form-control" name="post_4" rows="5" id="post_4"></textarea>
 						</div>
 
 		          </div>

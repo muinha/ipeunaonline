@@ -10,8 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Site Routes
 Route::get('/', 'SiteController@index');
+Route::get('post/{id}', 'SiteController@post');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login');

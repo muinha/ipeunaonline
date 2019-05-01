@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostAdminRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use App\CategoryNews;
@@ -29,7 +30,7 @@ class AdminNewsController extends Controller
 
 	}
 
-	public function store(Request $request)
+	public function store(PostAdminRequest $request)
 	{
 
 
@@ -53,7 +54,10 @@ class AdminNewsController extends Controller
 			'title' 	=> 	$request['title'],
 			'subtitle'	=>	$request['subtitle'],
 			'category'  =>  $request['category'],
-			'news'		=>	$request['news'],
+			'post_1'    =>	$request['post_1'],
+			'post_2'    =>	$request['post_2'],
+			'post_3'    =>	$request['post_3'],
+			'post_4'    =>	$request['post_4'],
 		]);
 
 		$imageid = $results->id;
@@ -84,13 +88,15 @@ class AdminNewsController extends Controller
 
 	}
 
-	public function update($id, Request $request)
+	public function update($id, PostAdminRequest $request)
 	{
 		$request->all();
 
+		$nameFile = ' ';
+
 		$image = ImageNews::find($id);
 
-		if($request->image_principal != " ")
+		if($request->image_principal != ' ')
 			Storage::delete("news/{$image->principal}");
 
 		if($request->hasFile('image_principal') && $request->file('image_principal')->isValid()){
@@ -103,6 +109,9 @@ class AdminNewsController extends Controller
 			return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
 			}
 		}
+
+		if($nameFile == ' ')
+			$nameFile = $image->image_principal;
 
 		$image->update([
 			'image_principal'	=>	$nameFile
