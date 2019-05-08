@@ -54,7 +54,7 @@
 
 	    <div class="lista-noticias">
 
-			<div class="row col-md-12 justify-content-center">
+			<div class="row col-md-12 col-sm-12 justify-content-center">
 			@foreach($news as $post)	
 				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
 					 <img class="card-img-top" alt="{{ $post->image_principal }}" src="{{ url("storage/news/{$post->image_principal}") }}">
@@ -90,7 +90,7 @@
 
 		<div class="pagina-inicial-turismo mt-3">
 			
-			<div class="row col-md-12 justify-content-center">
+			<div class="row col-md-12 col-sm-12 justify-content-center">
 				
 				<div class="card ml-3 mb-3" style="width: 18rem;">
 					 <img class="card-img-top" src="{{ asset('site/image/teste.jpg') }}" alt="Imagem de capa do card">

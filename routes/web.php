@@ -12,7 +12,10 @@
 */
 // Site Routes
 Route::get('/', 'SiteController@index');
+Route::get('news', 'SiteController@news');
 Route::get('post/{id}', 'SiteController@post');
+Route::get('login', 'SiteController@login');
+Route::get('cadastro', 'SiteController@register');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login');

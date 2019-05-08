@@ -19,6 +19,29 @@ class SiteController extends Controller
 
 	}
 
+	public function news()
+	{
+
+		$post = News::all();
+
+		return view('site.news', compact('post'));
+
+	}
+
+	public function register()
+	{
+
+		return view('site.register');
+
+	}
+
+	public function login()
+	{
+
+		return view('site.login');
+
+	}
+
 	public function post($id)
 	{
 

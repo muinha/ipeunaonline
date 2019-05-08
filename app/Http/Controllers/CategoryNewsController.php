@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\CategoryNews;
+use App\Http\Requests\CategoryPostRequest;
 
 class CategoryNewsController extends Controller
 {
@@ -26,7 +27,7 @@ class CategoryNewsController extends Controller
 
 	}
 
-	public function postNewsCategoryCreate(Request $request)
+	public function postNewsCategoryCreate(CategoryPostRequest $request)
 	{
 
 		$request->all();

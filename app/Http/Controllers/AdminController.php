@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\HierarquiaRequest;
+use App\Http\Requests\UserAdminRequest;
+use App\Http\Requests\UserUpdateAdminRequest;
 use Illuminate\Support\Facades\DB;
 use app\User;
 use App\Hierarquia;
@@ -42,7 +45,7 @@ class AdminController extends Controller
     }
 
 
-    public function postUserCreate(Request $request)
+    public function postUserCreate(UserAdminRequest $request)
     {
 
         $request->all();
@@ -91,7 +94,7 @@ class AdminController extends Controller
 
     }
 
-    public function postUserUpdate(Request $request)
+    public function postUserUpdate(UserUpdateAdminRequest $request)
     {
 
         $request->all();
@@ -159,7 +162,7 @@ class AdminController extends Controller
 
     }
 
-    public function postHierarquiaUsersCreate(Request $request)
+    public function postHierarquiaUsersCreate(HierarquiaRequest $request)
     {
 
         $request->all();

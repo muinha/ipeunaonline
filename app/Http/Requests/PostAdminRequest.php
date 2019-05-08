@@ -32,4 +32,18 @@ class PostAdminRequest extends FormRequest
             'post_4'        =>      'required',
         ];
     }
+
+    public function messages()
+    {
+
+        return [
+            'title.required'            =>      'Titulo obrigatorio!',
+            'subtitle.required'         =>      'Subtitulo obrigatorio!',
+            'post_1.required'           =>      'Paragrafo 1 Obrigatorio!',
+            'post_2.required'           =>      'Paragrafo 2 Obrigatorio!',
+            'post_3.required'           =>      'Paragrafo 3 Obrigatorio!',
+            'post_4.required'           =>      'Paragrafo 4 Obrigatorio!'
+        ];
+
+    }
 }

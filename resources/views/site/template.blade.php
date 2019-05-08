@@ -7,7 +7,6 @@
 
         <title>@yield('title')</title>
 
-        <!-- Fonts -->
         <link rel="stylesheet" href="site/css/style.css">
         <link href="site/css/app.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="site/css/bootstrap-social.css">
@@ -20,7 +19,7 @@
 
     <!-- Inicio menu de naveção 13/03/2019 -->
 
-    <header>
+<header>
 
     <div class="menu-topo">
         <div class="container">
@@ -32,10 +31,10 @@
                                 <a class="nav-link" href="#"><i class="fa fa-user"></i> Minha Conta</a>
                             </li>
                             <li class="nav-item mr-2">
-                                <a class="nav-link" href=""><i class="fa fa-user-plus"></i> cadatrar</a>
+                                <a class="nav-link" href="/cadastro"><i class="fa fa-user-plus"></i> cadatrar</a>
                             </li>
                             <li class="nav-item mr-2">
-                                <a class="nav-link" href=""><i class="fa fa-lock"></i> Login</a>
+                                <a class="nav-link" href="/login"><i class="fa fa-lock"></i> Login</a>
                             </li>
                        </ul>
                     </nav>
@@ -48,7 +47,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light ml-1">
 
-            <a class="navbar-brand h1" href="#">IPEÚNA online</a>
+            <a class="navbar-brand h1" href="/">IPEÚNA online</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -59,7 +58,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link mr-3" href="#">Inicio</a>
+                        <a class="nav-link mr-3" href="/">Inicio</a>
                     </li>
 
                     <li class="nav-item">
@@ -67,7 +66,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link mr-3" href="noticias">Notícias</a>
+                        <a class="nav-link mr-3" href="news">Notícias</a>
                     </li>
 
                     <li class="nav-item">
@@ -91,9 +90,12 @@
     </div>
 
 </header>
-        <!-- Fim do menu de naveção -->
 
+        <!-- Fim do menu de naveção -->
+<section>
         @yield('content')
+</section>
+        <!-- Inicio do Rodapé -->
 
 <rodape>
 
@@ -103,7 +105,7 @@
 
             <div class="row text-center">
         
-                <div class="col-md-4 mt-5">
+                <div class="col-md-4 col-sm-12 mt-5">
 
                     <h5>Rede Sociais</h5>
                     
@@ -123,14 +125,14 @@
 
                 </div>
 
-                <div class="col-md-4 mt-5">
+                <div class="col-md-4 col-sm-12 mt-5">
 
                     <p>&reg; copyright 2019 By <a class="nav-link text-info" href="">Samuel Sanches</a> </p>        
                     <hr>    
 
                 </div>
 
-                <div class="col-md-4 mt-3 mb-3">
+                <div class="col-md-4 col-sm-12 mt-3 mb-3">
                         
                         <ul class="list-group">
                                 
@@ -150,7 +152,9 @@
 
     </div>
 
-</rodape>        
+</rodape>
+
+        <!-- Fim do rodapé -->        
 
 
         <!-- Javascript -->
