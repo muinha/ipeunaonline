@@ -15,134 +15,136 @@
 
     </head>
 
-    <body>
+<body style="background:  #90ee90;">
 
     <!-- Inicio menu de naveção 13/03/2019 -->
 
-<header>
+    <header>
 
-    <div class="menu-topo">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-light ml-1">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active mr-2">
-                                <a class="nav-link" href="#"><i class="fa fa-user"></i> Minha Conta</a>
-                            </li>
-                            <li class="nav-item mr-2">
-                                <a class="nav-link" href="/cadastro"><i class="fa fa-user-plus"></i> cadatrar</a>
-                            </li>
-                            <li class="nav-item mr-2">
-                                <a class="nav-link" href="/login"><i class="fa fa-lock"></i> Login</a>
-                            </li>
-                       </ul>
-                    </nav>
+        <div class="menu-topo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand navbar-light ml-1">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active mr-2">
+                                    <a class="nav-link" href="#"><i class="fa fa-user"></i> Minha Conta</a>
+                                </li>
+                                <li class="nav-item mr-2">
+                                    <a class="nav-link" href="/cadastro"><i class="fa fa-user-plus"></i> cadatrar</a>
+                                </li>
+                                <li class="nav-item mr-2">
+                                    <a class="nav-link" href="/login"><i class="fa fa-lock"></i> Login</a>
+                                </li>
+                           </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
+        </div> <!-- End header area -->
+            
+        <div class="menu-topo">
+
+            <nav class="navbar navbar-expand-lg navbar-light ml-1">
+
+                <a class="navbar-brand h1" href="/">IPEÚNA online</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item active">
+                            <a class="nav-link mr-3" href="/">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="#">Sobre o site</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="news">Notícias</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="tourism">Turismo</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+
+                    </form>
+
+                </div>
+
+            </nav>
+
         </div>
-    </div> <!-- End header area -->
-        
-    <div class="menu-topo">
 
-        <nav class="navbar navbar-expand-lg navbar-light ml-1">
+    </header>
 
-            <a class="navbar-brand h1" href="/">IPEÚNA online</a>
+            <!-- Fim do menu de naveção -->
+    <section>
+            @yield('content')
+    </section>
+            <!-- Inicio do Rodapé -->
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <rodape>
 
-            <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
+        <div class="bg-dark text-light">
 
-                <ul class="navbar-nav mr-auto">
+            <div class="container">
 
-                    <li class="nav-item active">
-                        <a class="nav-link mr-3" href="/">Inicio</a>
-                    </li>
+                <div class="row text-center">
+            
+                    <div class="col-md-4 col-sm-12 mt-5">
 
-                    <li class="nav-item">
-                        <a class="nav-link mr-3" href="#">Sobre o site</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link mr-3" href="news">Notícias</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link mr-3" href="turismo">Turismo</a>
-                    </li>
-
-                </ul>
-
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-
-                </form>
-
-            </div>
-
-        </nav>
-
-    </div>
-
-</header>
-
-        <!-- Fim do menu de naveção -->
-<section>
-        @yield('content')
-</section>
-        <!-- Inicio do Rodapé -->
-
-<rodape>
-
-    <div class="bg-dark text-light">
-
-        <div class="container">
-
-            <div class="row text-center">
-        
-                <div class="col-md-4 col-sm-12 mt-5">
-
-                    <h5>Rede Sociais</h5>
-                    
-                    <a class="btn btn-social-icon btn-facebook">
-                        <span class="fa fa-facebook"></span>
-                    </a>
-
-                    <a class="btn btn-social-icon btn-twitter">
-                        <span class="fa fa-twitter"></span>
-                    </a>
-
-                    <a class="btn btn-social-icon btn-google">
-                        <span class="fa fa-google"></span>
-                    </a>
-
-                    <hr>            
-
-                </div>
-
-                <div class="col-md-4 col-sm-12 mt-5">
-
-                    <p>&reg; copyright 2019 By <a class="nav-link text-info" href="">Samuel Sanches</a> </p>        
-                    <hr>    
-
-                </div>
-
-                <div class="col-md-4 col-sm-12 mt-3 mb-3">
+                        <h5>Rede Sociais</h5>
                         
-                        <ul class="list-group">
-                                
-                            <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 1</li></a>
-                            <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 2</li></a>
-                            <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 3</li></a>
-                            <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 4</li></a>
-                            <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 5</li></a>
+                        <a class="btn btn-social-icon btn-facebook">
+                            <span class="fa fa-facebook"></span>
+                        </a>
 
-                        </ul>           
+                        <a class="btn btn-social-icon btn-twitter">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+
+                        <a class="btn btn-social-icon btn-google">
+                            <span class="fa fa-google"></span>
+                        </a>
+
+                        <hr>            
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 mt-5">
+
+                        <p>&reg; copyright 2019 By <a class="nav-link text-info" href="">Samuel Sanches</a> </p>        
+                        <hr>    
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 mt-3 mb-3">
+                            
+                            <ul class="list-group">
+                                    
+                                <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 1</li></a>
+                                <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 2</li></a>
+                                <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 3</li></a>
+                                <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 4</li></a>
+                                <a class="text-info" href=""><li class="list-group-item bg-secondary">Categoria 5</li></a>
+
+                            </ul>           
+
+                    </div>
 
                 </div>
 
@@ -150,9 +152,7 @@
 
         </div>
 
-    </div>
-
-</rodape>
+    </rodape>
 
         <!-- Fim do rodapé -->        
 

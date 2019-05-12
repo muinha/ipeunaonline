@@ -13,6 +13,8 @@
 // Site Routes
 Route::get('/', 'SiteController@index');
 Route::get('news', 'SiteController@news');
+Route::get('tourism', 'SiteController@tourism');
+Route::get('tourism/{id}', 'SiteController@tourismid');
 Route::get('post/{id}', 'SiteController@post');
 Route::get('login', 'SiteController@login');
 Route::get('cadastro', 'SiteController@register');
@@ -57,3 +59,13 @@ Route::get('admin/news/categories', 'CategoryNewsController@newsCategory');
 Route::get('admin/news/categories/create', 'CategoryNewsController@newsCategoryCreate');
 Route::post('admin/news/categories/create', 'CategoryNewsController@postNewsCategoryCreate');
 Route::get('admin/categories/news', 'CategoryNewsController@categoryNews');
+
+// Admin Tourism
+
+Route::get('admin/tourism', 'AdminTourismController@index');
+Route::get('admin/tourism/create', 'AdminTourismController@create');
+Route::post('admin/tourism/create', 'AdminTourismController@store');
+Route::get('admin/tourism/{id}/update', 'AdminTourismController@edit');
+Route::post('admin/tourism/{id}/update', 'AdminTourismController@update');
+Route::get('admin/tourism/{id}/album', 'AdminTourismController@album');
+Route::post('admin/tourism/{id}/album', 'AdminTourismController@albumStore');

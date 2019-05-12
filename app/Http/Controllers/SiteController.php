@@ -22,9 +22,23 @@ class SiteController extends Controller
 	public function news()
 	{
 
-		$post = News::all();
+		$post = DB::select("SELECT * FROM news a INNER JOIN image_news b USING(id)");
 
 		return view('site.news', compact('post'));
+
+	}
+
+	public function tourism()
+	{
+
+		return view('site.tourism');
+
+	}
+
+	public function tourismid($id)
+	{
+
+		return view('site.tourismid');
 
 	}
 

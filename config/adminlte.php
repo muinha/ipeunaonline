@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -153,12 +153,12 @@ return [
         'Configuração área de turismo',
         [
             'text' => 'Criar novo local de turismo',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/tourism/create',
             'icon' => 'user',
         ],
         [
-            'text' => 'Editar local de turismo',
-            'url'  => 'admin/settings',
+            'text' => 'Todos os locais de turismo',
+            'url'  => 'admin/tourism',
             'icon' => 'lock',
         ],
     ],
