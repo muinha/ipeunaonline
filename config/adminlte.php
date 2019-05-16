@@ -115,12 +115,12 @@ return [
             'icon' => 'user',
         ],
         [
-            'text' => 'Editar Usúario',
+            'text' => 'Editar Usuário',
             'url'  => 'admin/user/update',
             'icon' => 'edit',
         ],
         [
-            'text' => 'Cadastrar Usúarios Admin',
+            'text' => 'Cadastrar Usuário Admin',
             'url'  => 'admin/users/create',
             'icon' => 'edit',
         ],

@@ -1,6 +1,6 @@
 @extends ('adminlte::page')
 
-@section ('title', 'Criar uma hierarquia do usúario')
+@section ('title', 'Criar uma hierarquia do Usuário')
 
 @section ('content')
 
@@ -8,7 +8,7 @@
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Criar uma hierarquia do usúario</h1>
+        <h1>Criar uma hierarquia do Usuário</h1>
     	  @if($errors->any())
     	      <div class="alert alert-danger">
     		        <ul>

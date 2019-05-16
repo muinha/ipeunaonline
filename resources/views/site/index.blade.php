@@ -56,12 +56,12 @@
 
 			<div class="row col-md-12 col-sm-12 justify-content-center">
 			@foreach($news as $post)	
-				<div class="card mt-3 ml-3 mb-3" style="width: 18rem;">
+				<div class="card mt-3 ml-3 mb-3" style="width: 18rem; padding: 10px;">
 					 <img class="card-img-top" alt="{{ $post->image_principal }}" src="{{ url("storage/news/{$post->image_principal}") }}">
 					 <div class="card-body">
 					    <h5 class="card-title text-center">{{ $post->title }}</h5>
 					    <p class="card-text">{{ $post->subtitle }}</p>
-					    <a href="post/{{ $post->id }}" class="btn btn-primary">Visitar</a>
+					    <a href="post/{{ $post->id }}" class="btn btn-primary btn-block">Visitar</a>
 					</div>
 				</div>
 			@endforeach

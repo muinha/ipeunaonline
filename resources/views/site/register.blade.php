@@ -6,7 +6,7 @@
 
 <div class="container mt-3">
 	<h2 class="mb-3 text-center"><strong>Formulario de cadastro</strong></h2>
-	<form class="border" style="padding: 10px;" action="register" method="post">
+	<form class="bg-light border" style="padding: 10px;" action="register" method="post">
 		<div class="form-group">
 			<label for="inputName">Nome</label>
 			<input class="form-control" type="text" name="name" id="inputName" placeholder="Digite seu nome">

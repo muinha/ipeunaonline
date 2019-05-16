@@ -17,6 +17,7 @@ Route::get('tourism', 'SiteController@tourism');
 Route::get('tourism/{id}', 'SiteController@tourismid');
 Route::get('post/{id}', 'SiteController@post');
 Route::get('login', 'SiteController@login');
+Route::post('admin/login', 'UserLoginController@login');
 Route::get('cadastro', 'SiteController@register');
 
 // Authentication Routes...

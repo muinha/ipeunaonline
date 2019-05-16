@@ -1,6 +1,6 @@
 @extends ('adminlte::page')
 
-@section ('title', 'Criar um novo usuario')
+@section ('title', 'Criar um novo Usuário')
 
 @section ('content')
 

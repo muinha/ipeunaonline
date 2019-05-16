@@ -5,7 +5,8 @@
 @section('content')
 
 <div class="container mt-3 mb-3">
-	<form class="border" style="width: 350px; margin: 0px auto; padding: 10px">
+	<form action="admin/login" method="POST" class="bg-light border" style="width: 350px; margin: 0px auto; padding: 10px">
+	@csrf
 		<h2 class="text-center">Faça o login</h2>
 		<div class="form-group">
 			<label for="inputLogin">Login</label>
